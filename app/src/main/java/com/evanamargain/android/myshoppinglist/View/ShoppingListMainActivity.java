@@ -23,7 +23,7 @@ public class ShoppingListMainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressbar);
+    ProgressBar progressBar = findViewById(R.id.progressbar);
     progressBar.setVisibility(View.VISIBLE);
 
     model = new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(ShoppingListViewModel.class);
@@ -31,24 +31,22 @@ public class ShoppingListMainActivity extends AppCompatActivity {
     ArrayList<ShoppingItem> arrayOfItems = new ArrayList<>();
     ShoppingListAdapter adapter = new ShoppingListAdapter(this, arrayOfItems);
 
-
-    model.getShoppingListLiveData().observe(this, shoppingItems -> {
-      Log.d("TAG", "observer is on");
-
-
-    });
+    model.getShoppingListLiveData().observe(this, Observable -> {});
 
     model.getShoppingList().observe(this, shoppingList -> {
-      Log.d("TAG", "this observes the list");
+
       if (shoppingList != null ) {
         adapter.clear();
         adapter.addAll(shoppingList);
 
         ListView listView = findViewById(R.id.list);
         listView.setAdapter(adapter);
+
         progressBar.setVisibility(View.GONE);
       } else {
+
         Log.d("TAG", "awaiting for info");
+
       }
     });
   }
