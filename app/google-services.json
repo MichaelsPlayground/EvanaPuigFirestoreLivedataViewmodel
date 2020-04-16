@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "803798502437",
+    "firebase_url": "https://myshoppinglist-3e0da.firebaseio.com",
+    "project_id": "myshoppinglist-3e0da",
+    "storage_bucket": "myshoppinglist-3e0da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803798502437:android:ad156ef3b14141037603cc",
+        "android_client_info": {
+          "package_name": "com.evanamargain.android.myshoppinglist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnpuwW0LpYSIyj6GKBJqyX_vAyT67-0L4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
