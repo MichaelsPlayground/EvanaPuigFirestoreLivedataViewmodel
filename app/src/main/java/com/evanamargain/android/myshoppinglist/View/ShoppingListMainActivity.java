@@ -26,7 +26,10 @@ public class ShoppingListMainActivity extends AppCompatActivity {
     ProgressBar progressBar = findViewById(R.id.progressbar);
     progressBar.setVisibility(View.VISIBLE);
 
-    model = new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(ShoppingListViewModel.class);
+    //model = new ViewModelProvider(this, new ViewModelProvider.NewInstanceFactory()).get(ShoppingListViewModel.class);
+    ViewModelProvider.Factory test = (ViewModelProvider.Factory) new ViewModelProvider.NewInstanceFactory();
+
+    model = new ViewModelProvider(this, test).get(ShoppingListViewModel.class);
 
     ArrayList<ShoppingItem> arrayOfItems = new ArrayList<>();
     ShoppingListAdapter adapter = new ShoppingListAdapter(this, arrayOfItems);

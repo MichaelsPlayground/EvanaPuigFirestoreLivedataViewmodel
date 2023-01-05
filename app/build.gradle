@@ -2,13 +2,16 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
 android {
-  compileSdkVersion 29
-  buildToolsVersion "29.0.2"
+  //compileSdkVersion 29
+  compileSdkVersion 33
+  //buildToolsVersion "29.0.2"
 
   defaultConfig {
     applicationId "com.evanamargain.android.myshoppinglist"
-    minSdkVersion 16
-    targetSdkVersion 29
+    //minSdkVersion 16
+    minSdkVersion 21
+    //targetSdkVersion 29
+    targetSdkVersion 33
     versionCode 1
     versionName "1.0"
     multiDexEnabled true
@@ -30,13 +33,22 @@ android {
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-  implementation 'androidx.appcompat:appcompat:1.1.0'
-  implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-  testImplementation 'junit:junit:4.12'
-  androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-  androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+  //implementation 'androidx.appcompat:appcompat:1.1.0'
+  implementation 'androidx.appcompat:appcompat:1.5.1'
+  //implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+  implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+  //testImplementation 'junit:junit:4.12'
+  testImplementation 'junit:junit:4.13.2'
+  //androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+  androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+  //androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+  androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
   implementation 'com.android.support:multidex:1.0.3'
   implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-  implementation 'com.google.firebase:firebase-analytics:17.2.3'
-  implementation 'com.google.firebase:firebase-firestore:21.4.1'
+  //implementation 'com.google.firebase:firebase-analytics:17.2.3'
+  //implementation 'com.google.firebase:firebase-firestore:21.4.1'
+  implementation 'com.google.firebase:firebase-firestore:24.4.1'
 }
+// new
+// ADD THIS AT THE BOTTOM
+apply plugin: 'com.google.gms.google-services'
